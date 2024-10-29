@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Declares this document as HTML5 -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for supporting various characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on all devices -->
+    <title>To-Do List App</title> <!-- Sets the title of the webpage, displayed in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to the external CSS file for styling -->
+</head>
+<body>
+    <!-- Main container that holds the entire To-Do List application -->
+    <div class="container"> 
+        <!-- To-Do App structure -->
+        <div class="todo-app">
+            <!-- Heading with icon -->
+            <h2>To-Do List <img src="images/icon.png" alt="icon"></h2> <!-- Title of the app with an image icon next to it -->
+            
+            <!-- Input row for adding new tasks -->
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your Text"> <!-- Input field where user types new tasks -->
+                <button onclick="addTask()">Add</button> <!-- Add button to trigger the addTask() function in JavaScript -->
+            </div>
+            
+            <!-- List container where all the tasks will be dynamically added -->
+            <ul id="list-container">
+                <!-- Initially empty; list items will be added here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Links to the JavaScript file for the functionality of the To-Do List app -->
+    <script src="script.js"></script>
+</body>
+</html>

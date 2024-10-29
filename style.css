@@ -1,0 +1,124 @@
+/* Reset default margin and padding, apply box-sizing, and set font for the entire document */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container for centering the app on the page with a gradient background */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+/* Styling for the main To-Do app box */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling the app title */
+.todo-app h2 {
+    color: #002765; /* Text color for the heading */
+    display: flex; /* Flex layout to align text and icon */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px; /* Space between text and icon */
+}
+
+/* Styling the input row */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0; /* Light background for input field */
+    border-radius: 30px; /* Rounded corners for the input container */
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* Input field styling */
+input {
+    flex: 1; /* Allows the input to take remaining space */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px; /* Inner padding for better spacing */
+}
+
+/* Add button styling */
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945; /* Button color */
+    color: #fff; /* White text color */
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 40px; /* Rounded button */
+}
+
+/* Task list item styling */
+ul li {
+    list-style: none; /* Removes default bullet points */
+    font-size: 17px;
+    padding: 12px 8px 12px 50px; /* Padding with space for the icon */
+    user-select: none; /* Prevents text selection on click */
+    cursor: pointer;
+    position: relative; /* Allows for absolute positioning of the icon */
+}
+
+/* Circle icon before each task */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%; /* Creates a circular icon */
+    background-image: url(images/unchecked.png); /* Default unchecked icon */
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px; /* Aligns icon on the left side */
+}
+
+/* Styling for completed tasks */
+ul li.checked {
+    color: black; /* Darker text for completed items */
+    text-decoration: line-through; /* Strike-through effect for completion */
+}
+
+/* Changes the icon when a task is completed */
+ul li.checked::before {
+    background-image: url(images/checked.png); /* Checked icon */
+}
+
+/* Delete button styling inside each task */
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555; /* Color for delete icon */
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%; /* Circular delete button */
+}
+
+/* Hover effect for delete button */
+ul li span:hover {
+    background: #edeef0; /* Light background on hover */
+}
